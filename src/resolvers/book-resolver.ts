@@ -1,14 +1,6 @@
-const books = [
-  {
-    title: 'The Awakening',
-    author: 'Kate Chopin',
-  },
-  {
-    title: 'City of Glass',
-    author: 'Paul Auster',
-  },
-];
+import { getBooks } from '../services/book-service';
 
-export function getBooks() {
+export function books() {
+  const books = getBooks();
   return books;
 }
