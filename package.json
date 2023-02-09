@@ -11,10 +11,13 @@
   },
   "dependencies": {
     "@apollo/server": "^4.3.3",
+    "big.js": "^6.2.1",
     "eslint": "^8.33.0",
-    "graphql": "^16.6.0"
+    "graphql": "^16.6.0",
+    "graphql-tag": "^2.12.6"
   },
   "devDependencies": {
+    "@types/big.js": "^6.1.6",
     "@types/node": "^18.11.19",
     "@typescript-eslint/eslint-plugin": "^5.51.0",
     "@typescript-eslint/parser": "^5.51.0",
