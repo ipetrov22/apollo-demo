@@ -16,3 +16,18 @@ export const TokenType = gql`
     derivedHYDRA: BigGQL!
   }
 `;
+
+export const ListTokenBlockInput = gql`
+  input ListTokenBlockInput {
+    number: Float!
+  }
+`;
+
+export const ListTokenInput = gql`
+  input ListTokenInput {
+    id_in: [String!]
+    id: String
+    symbol_contains: String
+    name_contains: String
+  }
+`;
