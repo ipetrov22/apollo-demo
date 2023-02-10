@@ -1,4 +1,4 @@
-import gql from 'graphql-tag';
+import { gql } from 'graphql-tag';
 
 import { ListPairBlockInput, ListPairInput, PairType } from './pair';
 import { ListTokenBlockInput, ListTokenInput, TokenType } from './token';
