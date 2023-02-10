@@ -20,12 +20,10 @@ export const pairsQuery = gql`
       id
       pairAddress
       token0 {
-        id
         tokenAddress
         symbol
         name
         decimals
-        totalSupply
         tradeVolume
         tradeVolumeUSD
         untrackedVolumeUSD
@@ -34,12 +32,10 @@ export const pairsQuery = gql`
         derivedHYDRA
       }
       token1 {
-        id
         tokenAddress
         symbol
         name
         decimals
-        totalSupply
         tradeVolume
         tradeVolumeUSD
         untrackedVolumeUSD
@@ -49,7 +45,6 @@ export const pairsQuery = gql`
       }
       reserve0
       reserve1
-      totalSupply
       reserveHYDRA
       reserveUSD
       trackedReserveHYDRA
@@ -63,8 +58,6 @@ export const pairsQuery = gql`
       createdAtTimestamp
       createdAtBlockNumber
       liquidityProviderCount
-      _oneDayVolumeUSD
-      _oneWeekVolumeUSD
     }
   }
 `;

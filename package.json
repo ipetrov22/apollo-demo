@@ -12,9 +12,12 @@
   "dependencies": {
     "@apollo/server": "^4.3.3",
     "big.js": "^6.2.1",
+    "dotenv": "^16.0.3",
     "eslint": "^8.33.0",
     "graphql": "^16.6.0",
-    "graphql-tag": "^2.12.6"
+    "graphql-request": "^5.1.0",
+    "graphql-tag": "^2.12.6",
+    "node-fetch": "^3.3.0"
   },
   "devDependencies": {
     "@types/big.js": "^6.1.6",
