@@ -1,6 +1,7 @@
 import request from 'graphql-request';
 
 import { pairsQuery } from '../queries/pair';
+import { poolsQuery } from '../queries/pool';
 import { PairsArgs } from '../schema/pair';
 import { getEnvVariable } from '../utils/getEnvVariable';
 
@@ -10,7 +11,8 @@ export async function getV2Pairs(args: PairsArgs) {
   return data.pairs ? data.pairs : [];
 }
 
-export function getV3Pools() {
+export async function getV3Pools(args: PairsArgs) {
   const url = getEnvVariable('V3_GRAPH_ENDPOINT');
-  return [];
+  const data = await request(url, poolsQuery, args);
+  return data.pools ? data.pools : [];
 }

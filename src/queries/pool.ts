@@ -3,8 +3,8 @@ import { gql } from 'graphql-tag';
 
 export const poolsQuery = gql`
   query Pools(
-    $block: ListPairBlockInput
-    $where: ListPairInput
+    $block: Block_height
+    $where: Pool_filter
     $orderDirection: String
     $orderBy: String
     $skip: Int
