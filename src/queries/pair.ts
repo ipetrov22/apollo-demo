@@ -1,3 +1,4 @@
+// V2 Pair queries
 import { gql } from 'graphql-tag';
 
 export const pairsQuery = gql`
