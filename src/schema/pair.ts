@@ -1,4 +1,7 @@
+import Big from 'big.js';
 import { gql } from 'graphql-tag';
+
+import { Token } from './token';
 
 export const PairType = gql`
   type Pair {
@@ -63,4 +66,29 @@ export interface PairsArgs {
   orderDirection?: string;
   where?: ListPairInterface;
   block?: ListPairBlockInput;
+}
+
+export interface Pair {
+  id: string;
+  pairAddress: string;
+  token0: Token;
+  token1: Token;
+  reserve0: Big;
+  reserve1: Big;
+  totalSupply?: Big;
+  reserveHYDRA: Big;
+  reserveUSD: Big;
+  trackedReserveHYDRA: Big;
+  token0Price: Big;
+  token1Price: Big;
+  volumeToken0: Big;
+  volumeToken1: Big;
+  volumeUSD: Big;
+  untrackedVolumeUSD: Big;
+  txCount: Big;
+  createdAtTimestamp: Big;
+  createdAtBlockNumber: Big;
+  liquidityProviderCount: Big;
+  _oneDayVolumeUSD?: Big;
+  _oneWeekVolumeUSD?: Big;
 }

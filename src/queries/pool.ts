@@ -5,10 +5,10 @@ export const poolsQuery = gql`
   query Pools(
     $block: Block_height
     $where: Pool_filter
-    $orderDirection: String
-    $orderBy: String
+    $orderDirection: Pool_orderBy
+    $orderBy: OrderDirection
     $skip: Int
-    $first: Float
+    $first: Int
   ) {
     pools(
       block: $block
@@ -60,20 +60,3 @@ export const poolsQuery = gql`
     }
   }
 `;
-
-// // v2Prop: v3Prop
-// const map = {
-//   pairAddress: 'id',
-//   tokenAddress: 'id',
-//   tradeVolume: 'volume',
-//   tradeVolumeUSD: 'volumeUSD',
-//   untrackedVolumeUSD: 'volumeUSDUntracked',
-//   totalLiquidity: 'totalValueLocked',
-//   derivedHYDRA: 'derivedETH',
-//   reserve0: 'totalValueLockedToken0',
-//   reserve1: 'totalValueLockedToken1',
-//   reserveHYDRA: 'totalValueLockedETH',
-//   reserveUSD: 'totalValueLockedUSD',
-//   trackedReserveHYDRA: 'totalValueLockedETH',
-//   // untrackedVolumeUSD: 'volumeUSDUntracked' pool object
-// };

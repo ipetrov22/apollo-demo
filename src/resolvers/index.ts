@@ -1,4 +1,3 @@
-import { books } from './book-resolver';
 import { pair, pairs } from './pair-resolver';
 import { token, tokens } from './token-resolver';
 
@@ -6,7 +5,6 @@ import { token, tokens } from './token-resolver';
 // This resolver retrieves books from the "books" array above.
 const resolvers = {
   Query: {
-    books,
     pairs,
     tokens,
     pair,

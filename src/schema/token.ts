@@ -1,3 +1,4 @@
+import Big from 'big.js';
 import { gql } from 'graphql-tag';
 
 export const TokenType = gql`
@@ -31,3 +32,18 @@ export const ListTokenInput = gql`
     name_contains: String
   }
 `;
+
+export interface Token {
+  id?: string;
+  tokenAddress: string;
+  symbol: string;
+  name: string;
+  decimals: Big;
+  totalSupply?: Big;
+  tradeVolume: Big;
+  tradeVolumeUSD: Big;
+  untrackedVolumeUSD: Big;
+  txCount: Big;
+  totalLiquidity: Big;
+  derivedHYDRA: Big;
+}

@@ -4,11 +4,6 @@ import { ListPairBlockInput, ListPairInput, PairType } from './pair';
 import { ListTokenBlockInput, ListTokenInput, TokenType } from './token';
 
 const schema = gql`
-  type Book {
-    title: String
-    author: String
-  }
-
   # The "BigGQL" scalar type to represent currency values
   scalar BigGQL
 
@@ -23,7 +18,6 @@ const schema = gql`
   # The "Query" type is special: it lists all of the available queries that
   # clients can execute, along with the return type for each. In this
   type Query {
-    books: [Book]
     pairs(
       block: ListPairBlockInput
       where: ListPairInput
