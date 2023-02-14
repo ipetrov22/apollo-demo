@@ -1,4 +1,5 @@
 import { Pair } from '../schema/pair';
+import { Token } from '../schema/token';
 
 export function convertV3PoolToV2Pair(v3Pool): Pair {
   return {
@@ -46,6 +47,7 @@ export function convertV3PoolToV2Pair(v3Pool): Pair {
   };
 }
 
+// v2Prop: v3Prop
 export const pairPoolProps = {
   id: 'id',
   pairAddress: 'id',
@@ -64,4 +66,35 @@ export const pairPoolProps = {
   createdAtTimestamp: 'createdAtTimestamp',
   createdAtBlockNumber: 'createdAtBlockNumber',
   liquidityProviderCount: 'liquidityProviderCount',
+};
+
+export function convertV3TokenToV2(token): Token {
+  return {
+    id: token.id,
+    tokenAddress: token.id,
+    symbol: token.symbol,
+    name: token.name,
+    decimals: token.decimals,
+    tradeVolume: token.volume,
+    tradeVolumeUSD: token.volumeUSD,
+    untrackedVolumeUSD: token.volumeUSDUntracked,
+    txCount: token.txCount,
+    totalLiquidity: token.totalValueLocked,
+    derivedHYDRA: token.derivedETH,
+  };
+}
+
+// v2Prop: v3Prop
+export const tokenProps = {
+  id: 'id',
+  tokenAddress: 'id',
+  symbol: 'symbol',
+  name: 'name',
+  decimals: 'decimals',
+  tradeVolume: 'volume',
+  tradeVolumeUSD: 'volumeUSD',
+  untrackedVolumeUSD: 'volumeUSDUntracked',
+  txCount: 'txCount',
+  totalLiquidity: 'totalValueLocked',
+  derivedHYDRA: 'derivedETH',
 };
