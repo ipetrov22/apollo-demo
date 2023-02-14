@@ -45,3 +45,23 @@ export function convertV3PoolToV2Pair(v3Pool): Pair {
     liquidityProviderCount: v3Pool.liquidityProviderCount,
   };
 }
+
+export const pairPoolProps = {
+  id: 'id',
+  pairAddress: 'id',
+  reserve0: 'reserve0',
+  reserve1: 'reserve1',
+  reserveHYDRA: 'totalValueLockedETH',
+  reserveUSD: 'totalValueLockedUSD',
+  trackedReserveHYDRA: 'totalValueLockedETH',
+  token0Price: 'token0Price',
+  token1Price: 'token1Price',
+  volumeToken0: 'volumeToken0',
+  volumeToken1: 'volumeToken1',
+  volumeUSD: 'volumeUSD',
+  untrackedVolumeUSD: 'volumeUSDUntracked',
+  txCount: 'txCount',
+  createdAtTimestamp: 'createdAtTimestamp',
+  createdAtBlockNumber: 'createdAtBlockNumber',
+  liquidityProviderCount: 'liquidityProviderCount',
+};

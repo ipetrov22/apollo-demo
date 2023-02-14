@@ -5,8 +5,8 @@ export const poolsQuery = gql`
   query Pools(
     $block: Block_height
     $where: Pool_filter
-    $orderDirection: Pool_orderBy
-    $orderBy: OrderDirection
+    $orderDirection: OrderDirection
+    $orderBy: Pool_orderBy
     $skip: Int
     $first: Int
   ) {
