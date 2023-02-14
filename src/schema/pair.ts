@@ -47,7 +47,7 @@ export const ListPairInput = gql`
   }
 `;
 
-interface ListPairInterface {
+interface PairFilter {
   id_in?: string[];
   id?: string;
   token0?: string;
@@ -55,7 +55,8 @@ interface ListPairInterface {
   token0_in?: string[];
   token1_in?: string[];
 }
-interface ListPairBlockInput {
+
+interface PairBlockFilter {
   number: number;
 }
 
@@ -64,8 +65,8 @@ export interface PairsArgs {
   skip?: number;
   orderBy?: string;
   orderDirection?: string;
-  where?: ListPairInterface;
-  block?: ListPairBlockInput;
+  where?: PairFilter;
+  block?: PairBlockFilter;
 }
 
 export interface Pair {

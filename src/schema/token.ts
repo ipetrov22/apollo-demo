@@ -33,6 +33,26 @@ export const ListTokenInput = gql`
   }
 `;
 
+interface TokenFilter {
+  id_in?: string[];
+  id?: string;
+  symbol_contains: string;
+  name_contains?: string;
+}
+
+interface TokenBlockFilter {
+  number: number;
+}
+
+export interface TokenArgs {
+  first?: number;
+  skip?: number;
+  orderBy?: string;
+  orderDirection?: string;
+  where?: TokenFilter;
+  block?: TokenBlockFilter;
+}
+
 export interface Token {
   id?: string;
   tokenAddress: string;
