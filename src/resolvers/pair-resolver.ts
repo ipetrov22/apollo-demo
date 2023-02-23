@@ -18,7 +18,3 @@ export async function pairs(_, args: PairsArgs) {
 
   return pairs;
 }
-
-export function pair() {
-  return null;
-}

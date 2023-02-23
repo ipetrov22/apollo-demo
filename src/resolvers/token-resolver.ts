@@ -18,7 +18,3 @@ export async function tokens(_, args: TokenArgs) {
 
   return tokens;
 }
-
-export function token() {
-  return null;
-}

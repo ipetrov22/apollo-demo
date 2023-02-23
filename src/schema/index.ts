@@ -1,5 +1,6 @@
 import { gql } from 'graphql-tag';
 
+import { BlockType, ListBlockInput } from './block';
 import { ListPairBlockInput, ListPairInput, PairType } from './pair';
 import { ListTokenBlockInput, ListTokenInput, TokenType } from './token';
 
@@ -9,11 +10,13 @@ const schema = gql`
 
   ${PairType}
   ${TokenType}
+  ${BlockType}
 
   ${ListPairBlockInput}
   ${ListPairInput}
   ${ListTokenBlockInput}
   ${ListTokenInput}
+  ${ListBlockInput}
 
   # The "Query" type is special: it lists all of the available queries that
   # clients can execute, along with the return type for each. In this
@@ -26,8 +29,6 @@ const schema = gql`
       skip: Int
       first: Float
     ): [Pair!]!
-    pair(block: ListPairBlockInput, id: String!): Pair
-    token(block: ListTokenBlockInput, id: String!): Token
     tokens(
       orderDirection: String
       orderBy: String
@@ -36,6 +37,7 @@ const schema = gql`
       skip: Int
       first: Float
     ): [Token!]!
+    blocks(orderDirection: String, orderBy: String, first: Float, where: ListBlockInput): [Block!]
   }
 `;
 
